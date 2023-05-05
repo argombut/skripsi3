@@ -1,0 +1,6 @@
+---
+deployment:
+ tasks:
+ - export DEPLOYPATH=/home/u1444448/website/map
+ - /bin/chmod 777 -R $DEPLOYPATH
+ - /bin/ln -s /home/u1444448/website/map/public /home/u1444448/public_html/masjidhidayatulfalah.org/map
