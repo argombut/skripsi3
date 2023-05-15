@@ -1,6 +1,6 @@
 @extends('layout/kt',[
 "InfoPage" => [
-"Navbar" => '/kt/home'
+"Navbar" => '/home'
 ]
 ])
 @section('title', 'Dashboard')
@@ -18,153 +18,134 @@
                         <h2><strong>Dashboard</strong></h2>
                         <p>Data Warga Pemuda dan Anggota Karang Taruna</p>
                         <hr>
-                        
-
-
-
                                     <div class="row">
-
-
                                         <div class="col-xl-3 col-sm-6 col-12"> 
                                             <div class="card">
-                                            <a href="{{ url('kt/karangtaruna') }}">
-                                            <div class="card-content">
-                                                <div class="card-body">
-                                                    <div class="media d-flex">
-                                                        <div class="align-self-center">
-                                                            <i class="fa fa-briefcase fa-2x success"></i>
+                                                <a href="{{ url('kt/karangtaruna') }}">
+                                                <div class="card-content">
+                                                    <div class="card-body">
+                                                        <div class="media d-flex">
+                                                            <div class="align-self-center">
+                                                                <i class="fa fa-briefcase fa-2x success" style="color: #E3BE20"></i>
+                                                            </div>
+                                                            <div class="media-body text-right">
+                                                                <h3 class="success" style="color: #E3BE20">{{$data['Remaja']['KT']}}</h3>
+                                                                <span style="color: black">Anggota Karang Taruna</span>
+                                                            </div>
                                                         </div>
-                                                        <div class="media-body text-right">
-                                                            <h3 class="success">{{$data['Remaja']['KT']}}</h3>         
-                                            </a>
-                                                    <span>Anggota Karang Taruna</span>
                                                     </div>
                                                 </div>
-                                                </div>
-                                            </div>
+                                                </a>
                                             </div>
                                         </div>
 
                                         <div class="col-xl-3 col-sm-6 col-12">
                                             <div class="card">
-                                            <a href="{{ url('kt/warga') }}">
-                                            <div class="card-content">
-                                                <div class="card-body">
-
-                                                    <div class="media d-flex">
-                                                        <div class="align-self-center">
-                                                            <i class="fa fa-users fa-2x warning"></i>
+                                                <a href="{{ url('kt/warga') }}">
+                                                <div class="card-content">
+                                                    <div class="card-body">
+                                                        <div class="media d-flex">
+                                                            <div class="align-self-center">
+                                                                <i class="fa fa-users fa-2x warning" style="color: #20e35c"></i>
+                                                            </div>
+                                                            <div class="media-body text-right">
+                                                                <h3 class="warning" style="color: #20e35c">{{$data['Remaja']['Total']}}</h3>
+                                                                <span style="color: black">Jumlah Pemuda</span>
+                                                            </div>
                                                         </div>
-                                                        <div class="media-body text-right">
-                                                            <h3 class="warning">{{$data['Remaja']['Total']}}</h3>
-                                                            
-                                            </a>
-                                                    <span>Jumlah Pemuda</span>
                                                     </div>
                                                 </div>
-                                                </div>
-                                            </div>
+                                                </a>
                                             </div>
                                         </div>
-
 
                                         <div class="col-xl-3 col-sm-6 col-12">
                                             <div class="card">
-                                            <a href="{{ url('kt/perempuan') }}">
-                                            <div class="card-content">
-                                                <div class="card-body">
-
-                                                    <div class="media d-flex">
-                                                        <div class="align-self-center">
-                                                            <i class="fa fa-female fa-2x danger font-large-2 float-left"></i>
+                                                <a href="{{ url('kt/perempuan') }}">
+                                                <div class="card-content">
+                                                    <div class="card-body">
+                                                        <div class="media d-flex">
+                                                            <div class="align-self-center">
+                                                                <i class="fa fa-female fa-2x danger font-large-2 float-left" style="color: #e320a6"></i>
+                                                            </div>
+                                                            <div class="media-body text-right">
+                                                                <h3 class="danger" style="color: #e320a6">{{$data['Remaja']['Perempuan']}}</h3>
+                                                                <span style="color: black">Pemuda Perempuan</span>
+                                                            </div>
                                                         </div>
-                                                        <div class="media-body text-right">
-                                                            <h3 class="danger">{{$data['Remaja']['Perempuan']}}</h3>
-                                                            
-                                            </a>
-                                                    <span>Pemuda Perempuan</span>
                                                     </div>
                                                 </div>
-                                                </div>
-                                            </div>
+                                                </a>
                                             </div>
                                         </div>
-
-
 
                                         <div class="col-xl-3 col-sm-6 col-12">
                                             <div class="card">
                                             <a href="{{ url('kt/laki') }}">
-                                            <div class="card-content">
-                                                <div class="card-body">
-
-                                                    <div class="media d-flex">
-                                                        <div class="align-self-center">
-                                                            <i class="fa fa-male fa-2x primary font-large-2 float-left"></i>
+                                                <div class="card-content">
+                                                    <div class="card-body">
+                                                        <div class="media d-flex">
+                                                            <div class="align-self-center">
+                                                                <i class="fa fa-male fa-2x primary font-large-2 float-left" style="color: #2045e3"></i>
+                                                            </div>
+                                                            <div class="media-body text-right">
+                                                                <h3 class="primary" style="color: #2045e3">{{$data['Remaja']['Laki']}}</h3>
+                                                                <span style="color: black">Pemuda Laki-laki</span>
+                                                            </div>
                                                         </div>
-                                                        <div class="media-body text-right">
-                                                            <h3 class="primary">{{$data['Remaja']['Laki']}}</h3>
-                                                            
-                                            </a>
-                                                    <span>Pemuda Laki-laki</span>
                                                     </div>
                                                 </div>
-                                                </div>
-                                            </div>
+                                                </a>
                                             </div>
                                         </div>
-
-                                        
-
                                     </div>
                                     
-
+                                    <div class="row">
+                                        <div class="col-xl-6 col-sm-6 col-12">
+                                        </div>
+                                    </div>
     
                                     <div class="row">
-
                                         <div class="col-xl-6 col-sm-6 col-12">
                                             <div class="card">
                                                 <div class="card-body">
-                                                    <div class="card-title"> Keahlian </div>    
-                                                        <canvas id="myChart" style="width:100px;"></canvas>
-                                                        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-                                                            <script>
-                                                                var xValues = <?= $labelkeahlian ?>;
-                                                                var yValues = <?= $valueskeahlian ?>;
-                                                                var barColors = [
-                                                                "#007d79",
-                                                                "#E790BF",
-                                                                "#00AC94",
-                                                                "#005B4A",
-                                                                "#7A4B00",
-                                                                "#58083C",
-                                                                // slices: {
-                                                                // 0: { color: '#00AC94' },
-                                                                // 1: { color: '#E790BF' },
-                                                                // 2: { color: '#58083C' },
-                                                                // 3: { color: '#005B4A' },
-                                                                // 4: { color: '#7A4B00' },
+                                                <div class="card-title"> Keahlian Pemuda </div> 
+                                                    <canvas id="myChart" style="width:100px;"></canvas>
+                                                    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+                                                        <script>
+                                                            var xValues = <?= $labelkeahlian ?>;
+                                                            var yValues = <?= $valueskeahlian ?>;
+                                                            var barColors = [
+                                                            "#005B4A",
+                                                            "#00AC94",
+                                                            "#E790BF",
+                                                            // slices: {
+                                                            // 0: { color: '#00AC94' },
+                                                            // 1: { color: '#E790BF' },
+                                                            // 2: { color: '#58083C' },
+                                                            // 3: { color: '#005B4A' },
+                                                            // 4: { color: '#7A4B00' },
+                                                            
+                                                            // }
+                                                            ];
+
+                                                            new Chart("myChart", {
+                                                            type: "pie",
+                                                            data: {
+                                                                labels: xValues,
+                                                                datasets: [{
+                                                                backgroundColor: barColors,
+                                                                data: yValues,
+                                                                labels: yValues
+                                                                }]
+                                                            },
+                                                            options: {
                                                                 
-                                                                // }
-                                                                ];
-    
-                                                                new Chart("myChart", {
-                                                                type: "pie",
-                                                                data: {
-                                                                    labels: xValues,
-                                                                    datasets: [{
-                                                                    backgroundColor: barColors,
-                                                                    data: yValues,
-                                                                    labels: yValues
-                                                                    }]
-                                                                },
-                                                                options: {
-                                                                    
-                                                                }
-                                                                });
-                                                            </script>
-                                                        <hr><a href="{{ url('kt/keahlian') }}">Lihat semua</a>
-                                                </div>
+                                                            }
+                                                            });
+                                                        </script>
+                                                    <hr><a href="{{ url('kt/keahlian') }}">Lihat Semua</a>
+                                                </div> 
                                             </div>
                                         </div>
 
@@ -375,4 +356,5 @@
         }
     });
 </script>
+
 @endsection

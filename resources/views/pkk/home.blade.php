@@ -1,9 +1,9 @@
 @extends('layout/pkk',[
 "InfoPage" => [
-"Navbar" => '/pkk'
+"Navbar" => '/home'
 ]
 ])
-@section('title', 'Dashboard PKK')
+@section('title', 'Dashboard')
 
 @section('container')
 
@@ -16,89 +16,76 @@
                         <h2><strong>Dashboard</strong></h2>
                         <p>Data Warga Perempuan dan Ibu PKK/KWT Dusun Sanggrahan</p>
                         <hr>
-                        
-
-
-
+                                    {{--  JUMLAH DATA  --}}
                                     <div class="row">
-
-
                                         <div class="col-xl-4 col-sm-6 col-12"> 
                                             <div class="card">
-                                            <a href="{{ url('red_pkk/warga') }}">
-                                            <div class="card-content">
-                                                <div class="card-body">
-                                                <div class="media d-flex">
-                                                    <div class="align-self-center">
-                                                    <i class="fa fa-female fa-2x danger font-large-2 float-left"></i>
-                                                    </div>
-                                                    <div class="media-body text-right">
-                                                    <h3 class="danger">{{$countperempuan}}</h3>
-                                            </a>
-                                                    <span>Jumlah Warga Perempuan</span>
-                                                    </div>
-                                                </div>
-                                                </div>
-                                            </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-xl-4 col-sm-6 col-12">
-                                            <div class="card">
-                                            <!-- <a href="{{ url('red_pkk/datakk') }}"> -->
-                                            <div class="card-content">
-                                                <div class="card-body">
-                                                <div class="media d-flex">
-                                                    <div class="align-self-center">
-                                                    <i class="fa fa-users fa-2x primary font-large-2 float-left"></i>
-                                                    </div>
-                                                    <div class="media-body text-right">
-                                                    <h3 class="primary"> 0 </h3>
-                                            <!-- </a> -->
-                                                    <span>Anggota PKK/KWT</span>
+                                                <a href="{{ url('pkk/warga') }}">
+                                                <div class="card-content">
+                                                    <div class="card-body">
+                                                        <div class="media d-flex">
+                                                            <div class="align-self-center">
+                                                                <i class="fa fa-female fa-2x danger font-large-2 float-left" style="color: #E3BE20"></i>
+                                                            </div>
+                                                            <div class="media-body text-right">
+                                                                <h3 class="danger" style="color: #E3BE20">{{$countperempuan}}</h3> 
+                                                                <span style="color: black">Jumlah Warga Perempuan</span>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                </div>
-                                            </div>
+                                                </a>
                                             </div>
                                         </div>
 
                                         <div class="col-xl-4 col-sm-6 col-12">
                                             <div class="card">
-                                            <!-- <a href="{{ url('red_rw/datakk') }}"> -->
-                                            <div class="card-content">
-                                                <div class="card-body">
-                                                <div class="media d-flex">
-                                                    <div class="align-self-center">
-                                                    <i class="icon-pencil warning font-large-2 mr-2 float-left"></i>
-                                                    </div>
-                                                    <div class="media-body text-right">
-                                                    <h3 class="warning">{{$countkeahlian}}</h3>
-                                            <!-- </a> -->
-                                                    <span>Jumlah Keahlian</span>
+                                                <a href="{{ url('pkk/warga') }}">
+                                                <div class="card-content">
+                                                    <div class="card-body">
+                                                        <div class="media d-flex">
+                                                            <div class="align-self-center">
+                                                                <i class="fa fa-users fa-2x primary font-large-2 float-left" style="color: #2BE3D4"></i>
+                                                            </div>
+                                                            <div class="media-body text-right">
+                                                                <h3 class="primary" style="color: #2BE3D4"> 0 </h3>
+                                                                <span style="color: black">Anggota PKK/KWT</span>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                </div>
-                                            </div>
+                                                </a>
                                             </div>
                                         </div>
 
-                                    
-                                        
-                                        
+                                        <div class="col-xl-4 col-sm-6 col-12">
+                                            <div class="card">
+                                                <a href="{{ url('red_rw/keahlian') }}">
+                                                <div class="card-content">
+                                                    <div class="card-body">
+                                                        <div class="media d-flex">
+                                                            <div class="align-self-center">
+                                                                <i class="fa fa-suitcase fa-2x primary font-large-2 float-left" style="color: #E37E4D"></i>
+                                                            </div>
+                                                            <div class="media-body text-right">
+                                                                <h3 class="warning" style="color: #E37E4D">{{$countkeahlian}}</h3>
+                                                                <span style="color : black">Data Keahlian</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                </a>
+                                            </div>
+                                        </div>     
                                     </div>
+                                    {{--  JUMLAH DATA  --}}
 
-
-
+                                    {{--  CHART  --}}
                                     <div class="row justify-content-md-center">
-
                                         <div class="col-md-6">
                                             <div class="card">
-                                                
-                                                
                                                 <div class="card-body">
                                                 <div class="card-title"> Keahlian </div> 
-                                                
                                                     <canvas id="myChart" style="width:100px;"></canvas>
                                                     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
                                                         <script>
@@ -138,18 +125,10 @@
                                                         </script>
                                                     <hr><a href="{{ url('pkk/keahlian') }}">Lihat semua</a>
                                                 </div>
-
                                             </div>
-                                        </div>
-
-
-
-
-                                            
-
-                                                
-                                            
+                                        </div>      
                                     </div>
+                                    {{--  CHART  --}}
 
 
                                     

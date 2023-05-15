@@ -281,7 +281,7 @@ class KTController extends Controller
                 'data_keahlian_warga.id',
                 'data_keahlian_warga.kd_keahlian',
                 'datainduk.kd_induk',
-                'datainduk.no_kk',
+                'datainduk.kode_kk',
                 'datainduk.no_ktp',
                 'datainduk.kd_rt',
                 'datainduk.kd_agama',
@@ -299,7 +299,7 @@ class KTController extends Controller
             ->where('data_keahlian_warga.level_sertifikat', 'like', '%' . $_SESSION['level'] . '%')
             ->paginate(1000);
         // script untuk pagination biar ketika difilter masih bisa jalan paginationnya
-        $keahlian->withPath('/red_kt/keahlian?no_rt=&keahlian=&level=');
+        $keahlian->withPath('/kt/keahlian?no_rt=&keahlian=&level=');
 
 
         // script chart

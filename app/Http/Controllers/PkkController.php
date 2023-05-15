@@ -289,7 +289,7 @@ class PkkController extends Controller
                 'data_keahlian_warga.id',
                 'data_keahlian_warga.kd_keahlian',
                 'datainduk.kd_induk',
-                'datainduk.no_kk',
+                'datainduk.kode_kk',
                 'datainduk.no_ktp',
                 'datainduk.kd_rt',
                 'datainduk.kd_agama',

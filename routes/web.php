@@ -335,7 +335,7 @@ Route::middleware(['karangtaruna'])->group(function () {
     Route::get('/kt/laki', [KTController::class, 'laki']);
     Route::get('/kt/perempuan', [KTController::class, 'perempuan']);
     Route::get('/kt/karangtaruna', [KTController::class, 'anggota']);
-    Route::get('/kt/keahlian', [KTController::class, 'keahlian']);
+    Route::get('/kt/keahlian', [KTController::class, 'keahliankt']);
 
     //detail
     Route::get('/kt/detail', [KTController::class, 'detail']);

@@ -44,7 +44,7 @@
                         <strong class="card-title">Filter Data Pekerjaan</strong>
                     </div>
                     <div class="card-body">
-                        <form method="GET" action="{{ url('red_rw/pekerjaan') }}">
+                        <form method="GET" action="{{ url('pkk/pekerjaan') }}">
                             <div class="row"> 
                                 
                             <div class="col-md-2">
@@ -274,12 +274,12 @@
                         </div>
                         <div class="card-body">
                         <div class="table-responsive">
-                            <table id="bootstrap-data-table" class="table table-striped table-bordered">
+                            <table id="bootstrap-data-table" class="table table-striped table-bordered" style="text-align: center">
                                 <thead>
                                     <tr>
                                         <th>No</th>
-                                        <th>Nomor Kartu Keluarga</th>
-                                        <th>NIK</th>
+                                        <th>Kode Kartu Keluarga</th>
+                                        <th>Kode Warga</th>
                                         <th>RW</th>
                                         <th>RT</th>
                                         <th>Nama</th>
@@ -292,8 +292,8 @@
                                     @foreach( $pekerjaan as $result => $w )
                                     <tr>
                                         <td>{{ $result + $pekerjaan->firstitem() }}</td>
-                                        <td>{{$w->no_kk}}</td>
-                                        <td>{{$w->no_ktp}}</td>
+                                        <td>{{$w->kode_kk}}</td>
+                                        <td>{{$w->kd_induk}}</td>
                                         <td>{{$w->no_rw}}</td>
                                         <td>{{$w->no_rt}}</td>
                                         <td>{{$w->nama}}</td>

@@ -7,13 +7,14 @@
 
 @section('container')
 
+
 <div class="breadcrumbs">
     <div class="breadcrumbs-inner">
         <div class="row m-0">
             <div class="col-sm-4">
                 <div class="page-header float-left">
                     <div class="page-title">
-                        <h1>TABEL DATA DETAIL KEAHLIAN WARGA</h1>
+                        <h1>TABEL DATA DETAIL KEAHLIAN WARGA PEREMPUAN</h1>
                     </div>
                 </div>
             </div>
@@ -40,10 +41,10 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <strong class="card-title">Filter Data Keahlian</strong>
+                        <strong class="card-title">Filter Data Keahlian Perempuan</strong>
                     </div>
                     <div class="card-body">
-                        <form method="GET" action="{{ url('red_rw/keahlian') }}">
+                        <form method="GET" action="{{ url('pkk/keahlian') }}">
                             <div class="row"> 
                                 
                             <div class="col-md-3">
@@ -109,12 +110,11 @@
                                     var xValues = <?= $label ?>;
                                     var yValues = <?= $values ?>;
                                     var barColors = [
-                                    "#adc3ae",
-                                    "#00aba9",
-                                    "#2b5797",
-                                    "#7A4B00",
-                                    "#005B4A",
+                                    "#007d79",
                                     "#E790BF",
+                                    "#00AC94",
+                                    "#005B4A",
+                                    "#7A4B00",
                                     "#58083C",
                                     // slices: {
                                     // 0: { color: '#00AC94' },
@@ -152,16 +152,16 @@
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-header">
-                            <strong class="card-title">Tabel Keahlian Warga</strong>
+                            <strong class="card-title">Tabel Keahlian Warga Perempuan</strong>
                         </div>
                         <div class="card-body">
                         <div class="table-responsive">
-                            <table id="bootstrap-data-table" class="table table-striped table-bordered">
+                            <table id="bootstrap-data-table" class="table table-striped table-bordered" style="text-align: center">
                                 <thead>
                                 <tr>
                                         <th>No</th>
-                                        <th>No. KK</th>
-                                        <th>NIK</th>
+                                        <th>Kode KK</th>
+                                        <th>Kode Warga</th>
                                         <th>RT</th>
                                         <th>Nama</th>
                                         <th>Panggilan</th>
@@ -174,8 +174,8 @@
                                     @foreach($keahlian as $result => $k)
                                     <tr>
                                         <td>{{ $result + $keahlian->firstitem() }}</td>
-                                        <td>{{$k->no_kk}}</td>
-                                        <td>{{$k->no_ktp}}</td>
+                                        <td>{{$k->kode_kk}}</td>
+                                        <td>{{$k->kd_induk}}</td>
                                         <td>{{$k->kd_rt}}</td>
                                         <td>{{$k->nama}}</td>
                                         <td>{{$k->nm_panggilan}}</td>

@@ -44,7 +44,7 @@
                         <strong class="card-title">Filter Data Pekerjaan</strong>
                     </div>
                     <div class="card-body">
-                        <form method="GET" action="{{ url('red_rw/pekerjaan') }}">
+                        <form method="GET" action="{{ url('red_pkk/pekerjaan') }}">
                             <div class="row"> 
                                 
                             <div class="col-md-2">
